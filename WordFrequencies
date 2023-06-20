@@ -1,0 +1,20 @@
+import string
+
+k = input('Enter a sentence or a paragraph: ')
+Words = ''
+
+Punctuation_mark = string.punctuation
+
+for i in range(len(k)):
+    if k[i] not in Punctuation_mark:
+        Words += k[i]
+
+Words = sorted(Words.lower().split())
+
+Word_frequencies = {}
+
+for i in range(len(Words)):
+    count = Words.count(Words[i])
+    Word_frequencies[Words[i]] = count
+
+print(Word_frequencies)
