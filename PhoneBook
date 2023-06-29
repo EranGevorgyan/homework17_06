@@ -1,0 +1,27 @@
+contact = {}
+while True:
+    menu = int(input("Please choose an option:\n"
+                     "1. Add a new contact\n"
+                     "2. Search for a contact\n"
+                     "3. List all contacts\n"
+                     "4. Exit the program\n"
+                     "Enter your choice: "))
+
+    if menu == 1:
+        Name = input('Enter name: ')
+        Number = int(input('Enter a number: '))
+        contact[Name] = Number
+        print('Contact added successfully!')
+    elif menu == 2:
+        Sname = input('Enter name: ')
+        if Sname in contact:
+            print('Phone number:', contact[Sname])
+        else:
+            print('Contact not found!')
+    elif menu == 3:
+        print(contact)
+    elif menu == 4:
+        print('Goodbye!')
+        break
+    else:
+        print('Try again.')
